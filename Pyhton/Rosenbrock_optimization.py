@@ -22,7 +22,6 @@
 import numpy as np
 from vfsa_mod import vfsa
 from cost_fun_mod import cost_fun
-from rosenbrock_mod import rosen
 
 # Parameter example
 # var_op={'name': 'var1' <-- string (optional): name of the variable
@@ -32,6 +31,12 @@ from rosenbrock_mod import rosen
 #         'overlap': '   <-- string: if the variables can overlap each other. (y,n,yes,no,Yes,No,YES,NO)
 #         'dx': 0.1      <-- float: minimun distance between variables, mandatory if overlap is "no"
 #         'x0': x01}     <-- vector (optional): initial values of the variables. Must be of dimension npar.
+
+def rosen(x_in,args):
+    """The Rosenbrock function"""
+    x=x_in[0]   
+    return sum(100.0*(x[1:]-x[:-1]**2.0)**2.0 + (1-x[:-1])**2.0)
+
 
 var1_op={'name': 'x-coor',
          'npar': 5,
