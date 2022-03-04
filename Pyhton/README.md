@@ -1,1 +1,3 @@
-This folder contains a Python version of the Very Fast Simulated Annealing global optimization algorithm. There is also an example which consist in a sparse-spike deconvolution of a synthetic seismic trace.  
+This folder contains a Python version of the Very Fast Simulated Annealing global optimization algorithm. There is also an example which consist in finding the absolute minimum of the multivariate Rosenbrock. 
+
+
