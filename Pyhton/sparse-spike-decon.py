@@ -1,5 +1,25 @@
+#!/usr/bin/env python  
+# -*- coding: utf-8 -*- 
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+# 
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <http://www.gnu.org/licenses/>.
+#
+#----------------------------------------------------------------------------
+# Created By  : Daniel O. Perez
+# Created Date: November of 2019
+# email: perez.daniel.omar@gmail.com
+# ---------------------------------------------------------------------------
+
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy import signal
 from vfsa_mod import vfsa
 from funcion_costo_mod import funcion_costo
@@ -80,23 +100,23 @@ resultado=vfsa(funcion_costo,       #obligatorio: funcion a minimizar
 print("--- %s seconds ---" % (time.time() - start_time))
 
 
-# print(resultado.cost)
-# print('Posiciones',resultado.x[0])
-# print('Amplitudes',resultado.x[1])
+print(resultado.cost)
+print('Posiciones',resultado.x[0])
+print('Amplitudes',resultado.x[1])
 
-# #grafico
+#Plot 
 
-# ref_out=np.zeros(ns)
-# for i in range(np.size(resultado.x[0])):
-#     ref_out[np.int(resultado.x[0][i])]=resultado.x[1][i]
+ref_out=np.zeros(ns)
+for i in range(np.size(resultado.x[0])):
+    ref_out[np.int(resultado.x[0][i])]=resultado.x[1][i]
 
-# traza_calc=np.convolve(wav,ref_out,mode='same')
+traza_calc=np.convolve(wav,ref_out,mode='same')
 
 
-# plt.figure(1)
-# plt.plot(range(0,ns),traza_n,range(0,ns),traza_calc)
-# plt.show()
+plt.figure(1)
+plt.plot(range(0,ns),traza_n,range(0,ns),traza_calc)
+plt.show()
 
-# plt.figure(2)
-# plt.plot(range(0,ns),ref,range(0,ns),ref_out)
-# plt.show()
+plt.figure(2)
+plt.plot(range(0,ns),ref,range(0,ns),ref_out)
+plt.show()
