@@ -21,7 +21,6 @@
 
 import numpy as np
 from vfsa_mod import vfsa
-from cost_fun_mod import cost_fun
 
 # Parameter example
 # var_op={'name': 'var1' <-- string (optional): name of the variable
