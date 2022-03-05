@@ -1,8 +1,0 @@
-param_vfsa90               ! FILEIN1: parameter bounds and max perturbation
-none                       ! FILEIN2: initial estimate (OPTIONAL)
-out_vfsa90                 ! FILEOUT1: general output (convergence status)
-
-30000	30000	0.1	-1.d-3	! ITMAX		ITMAX_CON	THRES	XMISFIT
-2.0	1.0	1.d-5	100	! QUENCH	TSCALE		TRS	TAS
-0	0	-100		! IFREQ_RE	IFREQ_TSCALE	IOP_PRT	
-
