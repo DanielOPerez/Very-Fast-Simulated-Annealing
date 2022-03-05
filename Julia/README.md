@@ -1,1 +1,1 @@
-
+This folder contains a Julia version of the Very Fast Simulated Annealing global optimization algorithm. There is also an example which consist in finding the absolute minimum of the multivariate Rosenbrock.
